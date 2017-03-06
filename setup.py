@@ -11,7 +11,7 @@ Copyright (C) 2017
 
 def requirements():
 	"""Build the requirements list for this project"""
-	requirements_list = []
+	requirements_list = list()
 	with open('requirements.txt') as pc_requirements:
 		for install in pc_requirements:
 			requirements_list.append(install.strip())
