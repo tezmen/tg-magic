@@ -8,15 +8,6 @@ from distutils.core import setup
 Copyright (C) 2017
 """
 
-
-def requirements():
-	"""Build the requirements list for this project"""
-	requirements_list = list()
-	with open('requirements.txt') as pc_requirements:
-		for install in pc_requirements:
-			requirements_list.append(install.strip())
-	return requirements_list
-
 setup(
 	name='tgmagic',
 	version='1.0',
@@ -27,7 +18,7 @@ setup(
 	author_email='tezmenpro@gmail.com',
 	url='https://github.com/tezmen/tg-magic',
 	packages=['tgmagic'],
-	install_requires=requirements(),
+	install_requires=['python-telegram-bot>=5.0', 'requests>=2.0', 'dpath=>1.4.0'],
 	classifiers=[
 		'License :: OSI Approved :: Apache Software License',
 		'Operating System :: OS Independent',
