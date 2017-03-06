@@ -1,0 +1,3 @@
+python-telegram-bot>=5.0
+requests>=2.0
+dpath=>1.4.0
