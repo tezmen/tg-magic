@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-from distutils.core import setup
-
+from setuptools import setup
 
 """
 @author: tezmen
@@ -27,6 +26,7 @@ setup(
 	keywords='telegram, bot, keyboard, simple, multi-level, three, menu',
 	author_email='tezmenpro@gmail.com',
 	url='https://github.com/tezmen/tg-magic',
+	download_url='https://github.com/tezmen/tg-magic/archive/master.zip',
 	packages=['tgmagic'],
 	install_requires=requirements(),
 	classifiers=[
