@@ -1,52 +1,21 @@
 # -*- coding: utf-8 -*-
-import logging
 from telegram.ext import CommandHandler
 from telegram.ext import Filters
 from telegram.ext import MessageHandler
 from telegram.ext import Updater
 import os
 
-from tgmagic.buttons import PrevButton, ExtendNames
+from tgmagic.buttons import PrevButton
 from tgmagic.bot import MagicFunction
 from tgmagic.helper import menu
 
-#from collections import OrderedDict
-'''
-my_custom_menu = OrderedDict([
-	('menu', OrderedDict([
-		('inventory', '⛏Инвентарь'),
-		('inventory_nested', OrderedDict([
-			('potion', '⚗Зелья'),
-			('armor', '🛡Броня'),
-			('weapon', '⚔Оружие'),
-			('prev', PrevButton('◀️Назад')),
-			('weapon_nested', OrderedDict([
-				('sword', '🗡Меч'),
-				('knife', '🔪Нож'),
-				('prev', PrevButton('◀️Назад')),
-				('prev2', PrevButton('⏪Назад в меню', 2))
-			]))
-		])),
-		('magic', '🔮Магия'),
-		('magic_nested', OrderedDict([
-			('fire', '🔥Огненный шар!'),
-			('cold', '❄️Ледяной шип'),
-			('prev', PrevButton('◀️Назад'))
-		])),
-		('skills', '⛓Навыки'),
-		('map', '🗺Карта мира')
-	]))
-])'''
-
-ExtendNames().start_element = 'menu1'
-
 my_custom_menu = {
-	'menu1': {
+	'menu': {
 		'magic': '🔮Магия',
 		'magic_nested': {
 			'fire': '🔥Огненный шар!',
 			'cold': '❄️Ледяной шип',
-			'prev': (PrevButton('◀️Назад'))
+			'prev': PrevButton('◀️Назад')
 		},
 		'inventory': '⛏Инвентарь',
 		'inventory_nested': {
@@ -62,14 +31,6 @@ my_custom_menu = {
 		},
 	}
 }
-
-logging.basicConfig(level=logging.INFO, filename='pliskin.log',
-					format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-console = logging.StreamHandler()
-console.setLevel(logging.DEBUG)
-formatter = logging.Formatter('[%(asctime)s] %(name)s: %(levelname)s %(message)s')
-console.setFormatter(formatter)
-logging.getLogger().addHandler(console)
 
 
 class TestBot(MagicFunction):
@@ -162,7 +123,7 @@ class TestBot(MagicFunction):
 
 	def main(self):
 		self.set_custom_menu(my_custom_menu)
-		updater = Updater('276528186:AAGll9dpR_YphvXlgpmp2yKE7kGlx-5jIV0')
+		updater = Updater('API:KEY')
 		dp = updater.dispatcher
 		dp.add_handler(CommandHandler('start', self.start))
 		dp.add_handler(MessageHandler(Filters.text, self.text))
