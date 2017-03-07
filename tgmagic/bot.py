@@ -3,6 +3,7 @@ from telegram import ReplyKeyboardMarkup
 from tgmagic.menu import MagicMenu
 from collections import OrderedDict
 
+
 class MagicFunction:
 	menu_storage = dict()
 	custom_menu = OrderedDict([])

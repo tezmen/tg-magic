@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+
 def singleton(class_):
 	"""
 	Function for realisation of singleton pattern

@@ -49,7 +49,7 @@ class MagicMenu:
 
 	def set_state(self, key):
 		"""
-		Set current state of the menu
+		Set current state of the menu.
 		:param key:
 		:return:
 		"""

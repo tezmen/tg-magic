@@ -24,6 +24,7 @@ class PrevButton:
 class Buttons:
 	list = [PrevButton]
 
+
 @singleton
 class ExtendNames:
 	previous = 'prev'
