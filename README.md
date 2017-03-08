@@ -1,14 +1,7 @@
 # tg-magic
 Module for multi-level menu in telegram bots based on "python-telegram-bot"
 
-.. image:: https://img.shields.io/pypi/pyversions/tgmagic.svg
-   :target: https://pypi.python.org/pypi/tgmagic
-   :alt: Supported python versions
-
-.. image:: https://travis-ci.org/tezmen/tg-magic.svg?branch=master
-   :target: https://travis-ci.org/tezmen/tg-magic
-   :alt: Travis CI Status
-
+[![N|Solid](https://img.shields.io/pypi/pyversions/tgmagic.svg)](https://pypi.python.org/pypi/tgmagic)
 
 ### Installation
 You can install or upgrade tg-magic with:
